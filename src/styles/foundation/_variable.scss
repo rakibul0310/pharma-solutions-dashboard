@@ -1,0 +1,259 @@
+/*=============================================
+=            #Variables                       =
+=============================================*/
+
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * 
+ * TYPOGRAPHY
+ * Font families......................The fonts used in the design system.
+ * Font weights.......................Font weights.
+ * Sizes..............................Font sizing for body text, paragraphs, inputs.
+ * Heading sizes......................Font sizing for page headings.
+ *
+ * BREAKPOINTS
+ * Breakpoints........................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing............................Global fixed set of spacing variables.
+ *
+ * SHADOW
+ * Shadows............................Global fixed set of shadow variables
+ *
+ */
+
+/*=============================================
+=            COLORS                           =
+=============================================*/
+
+/* main colors */
+$primary: #64c8bc;
+$secondary: #45b854;
+$warning: #ffa958;
+$accent: #6554c0;
+$base-100: #3a4c70;
+$base-200: #9ba7bf;
+$base-300: #424e79;
+$error: #ff8a8a;
+
+/* Utility colors */
+$white: white;
+$dark-light: rgb(92, 92, 92);
+$dark: black;
+$gray: gray;
+$gray-light: #f8f9fa;
+
+:root {
+  // background color variables
+  --bg-body: white;
+  --bg-white: white;
+  --bg-gray: #eef1f5;
+  --bg-primary: #64c8bc;
+  --bg-secondary: #45b854;
+  --bg-warning: #ffa958;
+  --bg-accent: #6554c0;
+  --bg-error: #ff8a8a;
+  --bg-active-menu: #f9fafc;
+
+  // box shadow
+  --box-shadow: 0 5px 5px 0 rgb(82 63 105 / 5%);
+  --box-shadow-1: 1px 1px 7px rgb(154 154 204 / 10%);
+  --box-shadow-2: 0 10px 40px 0 hsl(212deg 8% 45% / 30%);
+  --box-shadow-3: 0px 1px 15px 1px hsl(212deg 8% 45% / 30%);
+  --box-shadow-navicon: 0 2px 3px rgb(4 4 7 / 10%);
+  --box-shadow-sidebar-menu: 0 5px 10px #c4cdeb;
+  --box-shadow-blue: 0 5px 10px #c4cdeb;
+  --box-shadow-danger: 0 5px 10px #efc2c9;
+  --box-shadow-cyan: 0 5px 10px #e4cbfb;
+  --box-shadow-success: 0 5px 10px #99daea;
+
+  // border-radius
+  --border-radius: 25px;
+
+  // text color variables
+  --text-menu-active-color: #6554c0;
+  --text-gray: #9fa4a6;
+  --text-white: white;
+  --text-primary: #64c8bc;
+  --text-black: #000;
+  --text-disabled: rgba(0, 0, 0, 0.26);
+  --text-navicon-color: #495584;
+  --text-default-color: #7987a1;
+  --text-sidebar-hover-color: #6259ca;
+  --text-sidebar-color: #7b8191;
+  --text-p-color: #4a4a69;
+  --text-gray-p-color: #7987a1;
+  --text-dark-p-color: #383853;
+
+  // border color variables
+  --border-1: 1px solid #ededf5;
+  --border-2: 1px solid #939393;
+  --border-3: 1px solid #93939394;
+  --border-4: 1px solid #eaedf1;
+  --hover-border: 1px solid #00a5ec;
+  --border-header: 1px solid #eaedf1;
+}
+
+// background color variables
+$bg-body: var(--bg-body);
+$bg-white: var(--bg-white);
+$bg-gray: var(--bg-gray);
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$bg-warning: var(--bg-warning);
+$bg-accent: var(--bg-accent);
+$bg-error: var(--bg-error);
+$bg-menu-active-color: var(--bg-active-menu);
+
+// box shadow
+$box-shadow: var(--box-shadow);
+$box-shadow-1: var(--box-shadow-1);
+$box-shadow-2: var(--box-shadow-2);
+$box-shadow-3: var(--box-shadow-3);
+$box-shadow-navicon: var(--box-shadow-navicon);
+$box-shadow-sidebar-menu: var(--box-shadow-sidebar-menu);
+$box-shadow-blue: var(--box-shadow-blue);
+$box-shadow-danger: var(--box-shadow-danger);
+$box-shadow-cyan: var(--box-shadow-cyan);
+$box-shadow-success: var(--box-shadow-success);
+
+// border-radius
+$border-radius: var(--border-radius);
+
+// text color variables
+$text-menu-active-color: var(--text-menu-active-color);
+$text-gray: var(--text-gray);
+$text-white: var(--text-white);
+$text-primary: var(--text-primary);
+$text-black: var(--text-black);
+$text-disabled: var(--text-disabled);
+$text-navicon-color: var(--text-navicon-color);
+$text-default-color: var(--text-default-color);
+$text-sidebar-hover-color: var(--text-sidebar-hover-color);
+$text-sidebar-color: var(--text-sidebar-color);
+$text-p-color: var(--text-p-color);
+$text-gray-p-color: var(--text-gray-p-color);
+$text-dark-p-color: var(--text-dark-p-color);
+
+// border color variables
+$border-1: var(--border-1);
+$border-2: var(--border-2);
+$border-3: var(--border-3);
+$border-4: var(--border-4);
+$hover-border: var(--hover-border);
+$border-header: var(--border-header);
+
+// font family variable
+$font-family: "Poppins", sans-serif;
+
+/*=====  End of colors  ======*/
+
+/*=============================================
+=            TYPOGRAPHY                       =
+=============================================*/
+
+/* Font Families */
+
+$roboto: "Roboto", sans-serif;
+$poppins: "Poppins", sans-serif;
+
+/* Font Weights */
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+/* Font Sizes */
+
+$fs-xs: 0.75rem; // 12px
+$fs-sm: 0.875rem; // 14px
+$fs-base: 1rem; // 16px
+$fs-lg: 1.125rem; // 18px
+$fs-xl: 1.5rem; // 24px
+
+// This for mapping
+$fs: (
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  lg: 1.125rem,
+  xl: 1.5rem,
+);
+
+/* Heading Font Sizes */
+
+$h-1: 1.5rem; // 24px
+$h-2: 1.375rem; // 22px
+$h-3: 1.125rem; // 18px
+$h-4: 1rem; // 16px
+$h-5: 0.875rem; // 14px
+$h-6: 0.75rem; // 12px
+
+// This for mapping
+$h: (
+  1: 1.5rem,
+  2: 1.375rem,
+  3: 1.125rem,
+  4: 1rem,
+  5: 0.875rem,
+  6: 0.75rem,
+);
+
+/*=====  End of Typography  ======*/
+
+/*=============================================
+=            BREAKPOINTS                     =
+=============================================*/
+
+$breakpoints: (
+  md: 48rem,
+  // 768px
+  lg: 64rem,
+  // 1024px
+  xl: 80rem,
+  // 1280px
+);
+
+/*=====  End of Breakpoints  ======*/
+
+/*=============================================
+=            SPACING                         =
+=============================================*/
+
+$spacing: (
+  none: 0,
+  xxxs: 0.25rem,
+  // 4px
+  xxs: 0.5rem,
+  // 8px
+  xs: 0.75rem,
+  // 12px
+  sm: 1rem,
+  // 16px
+  md: 1.5rem,
+  // 24px
+  lg: 2rem,
+  // 32px
+  xl: 3rem,
+  // 48px
+  xxl: 4.5rem,
+  // 72px
+  xxxl: 6rem,
+  // 96px
+) !default;
+
+/*=====  End of Spacing  ======*/
+
+/*=============================================
+=            SHADOWS                          =
+=============================================*/
+
+$shadows: (
+  base: 0 4px 11px rgba(157, 157, 157, 0.21),
+);
+
+/*=====  End of Shadows  ======*/
