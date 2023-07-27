@@ -1,0 +1,112 @@
+.navbar__section__container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  background-color: $bg-white;
+  transition: all 0.3s ease-in-out;
+  border-bottom: $border-header;
+  z-index: 20000;
+
+  .navbar__branding__container {
+    padding: 0.7rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      box-shadow: $box-shadow-navicon;
+      border-radius: 5px;
+    }
+  }
+
+  .navbar__menu__lists {
+    display: flex;
+    .navbar__menu__list {
+      list-style-type: none;
+      .theme_icon {
+        margin-right: 1rem;
+        #theme_icon {
+          padding: 0.5rem;
+          border: none;
+          border-radius: 50%;
+          text-align: center;
+          box-shadow: $box-shadow-navicon;
+        }
+      }
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .popup__menu {
+        background: linear-gradient(
+          to bottom,
+          rgba(51, 51, 255, 0.5),
+          rgba(0, 204, 255, 0.5)
+        );
+        backdrop-filter: blur(10px);
+        box-shadow: $box-shadow;
+        position: absolute;
+        top: 65px;
+        right: 45px;
+        width: 14rem;
+        height: 14rem;
+        padding: 1.5rem;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+        animation: popupMenuToggle 0.5s;
+
+        ul {
+          font-family: "poppins", sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          li {
+            text-transform: capitalize;
+            margin: 0.5rem 0;
+
+            a {
+              color: $text-white;
+
+              &:hover {
+                color: #ff4500;
+              }
+              &:visited {
+                color: none;
+              }
+            }
+          }
+        }
+      }
+
+      .open {
+        display: block;
+        transition: all 0.3s ease-in-out;
+        // animation: popupMenuClose 0.5s;
+      }
+      .close {
+        animation: popupMenuClose;
+        animation: both;
+        display: none;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes popupMenuToggle {
+  from {
+    // width: 0rem;
+    height: 0rem;
+    transition: all 0.3s ease-in-out;
+  }
+  to {
+    // width: 14rem;
+    height: 14rem;
+    transition: all 0.5s ease-in-out;
+  }
+}

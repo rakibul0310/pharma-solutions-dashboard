@@ -25,15 +25,17 @@
 @import "./base/reset";
 @import "./base/root";
 @import "./base/app";
-@import "./foundation/index";
+// @import "./foundation/index";
 
 /*=============================================
  =           Components                        =
  =============================================*/
+@import "./components/index";
 
 /*=============================================
  =            Pages                            =
  =============================================*/
+@import "./pages/index";
 
 /*=============================================
  =            External css import              =

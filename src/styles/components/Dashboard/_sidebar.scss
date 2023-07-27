@@ -1,0 +1,94 @@
+.sidebar__section__container {
+  .logo__container {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: $bg-white;
+    z-index: 9;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+    border-bottom: $border-header;
+    padding: 1rem;
+    .header__logo__container {
+      display: flex;
+      img {
+        margin: 0 0.6rem;
+      }
+      .logo__text__container {
+        display: flex;
+        flex-direction: column;
+        .text1 {
+          margin: 0;
+          padding: 0;
+          color: #3a4c70;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px; /* 100% */
+          letter-spacing: 4.48px;
+          text-transform: uppercase;
+        }
+        span {
+          width: 100%;
+          height: 1px;
+          background: #3a4c70;
+        }
+        .text2 {
+          margin: 0;
+          padding: 0;
+          color: #3a4c70;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 100% */
+          letter-spacing: 3.6px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 0.2rem;
+      // color: tomato;
+      color: #2a2a72;
+      font-style: italic;
+    }
+    span {
+      font-family: "poppins", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: $text-black;
+    }
+  }
+  .user__info__container {
+    padding: 5px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    @include breakpoints(laptop) {
+      padding: 0 9px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $text-menu-active-color;
+      overflow: hidden;
+      text-transform: capitalize;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 0.2rem;
+    }
+    span {
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: "poppins", sans-serif;
+    }
+  }
+  .sidebar__menu__container {
+    .sidebar__menu__lists {
+      list-style: none;
+      padding: 10px 10px 0 0;
+    }
+  }
+}
