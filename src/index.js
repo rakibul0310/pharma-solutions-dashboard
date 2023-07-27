@@ -1,14 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { Breakpoints } from "react-device-breakpoints";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const breakpoints = {
+  isTablet: "(max-width: 767px)",
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Breakpoints {...breakpoints}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Breakpoints>
 );
 
 // If you want to start measuring performance in your app, pass a function
