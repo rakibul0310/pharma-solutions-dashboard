@@ -7,6 +7,8 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import CustomIcon from "../CustomIcon";
 import CustomLink from "../CustomLink";
 import avatar from "../../Assets/profile.png";
+import { GrNotification } from "react-icons/gr";
+import { GoDotFill } from "react-icons/go";
 
 const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -34,14 +36,6 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
             }}
           />
         </CustomIcon>
-        {/* {sidebarToggle && (
-          <div className="logo__container">
-            <CustomLink className="header__logo" href="/">
-              <h2>BLC.</h2>
-              <span>Blended Learning Center</span>
-            </CustomLink>
-          </div>
-        )} */}
       </div>
       <div className="navbar__search">
         <input type="search" placeholder="Search Now" name="" id="" />
@@ -72,35 +66,20 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
             </div>
           </li>
           <li className="navbar__menu__list profile" ref={toggleRef}>
-            <img
-              src={avatar}
-              alt="user_pic"
-              onClick={() => {
-                setOpenMenu(!openMenu);
-                // setShowPopupMenu(!showPopupMenu);
-              }}
-            />
+            <div className="notfication__icon__container">
+              <CustomIcon className="notication__icon">
+                <GrNotification />
+              </CustomIcon>
+              <CustomIcon className="notification__dot">
+                <GoDotFill />
+              </CustomIcon>
+            </div>
+            <img src={avatar} alt="user_pic" />
             <div className="profile__text__container">
               <span>Bradly Robin</span>
               <CustomIcon>
                 <IoIosArrowDown />
               </CustomIcon>
-            </div>
-            <div className={`popup__menu ${openMenu ? "open" : "close"}`}>
-              <ul>
-                <li>
-                  <CustomLink href="#">Profile</CustomLink>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="logout-link"
-                    onClick={() => localStorage.removeItem("blcToken")}
-                  >
-                    Logout
-                  </a>
-                </li>
-              </ul>
             </div>
           </li>
         </ul>

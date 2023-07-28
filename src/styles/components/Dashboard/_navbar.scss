@@ -22,6 +22,7 @@
 
   .navbar__search {
     position: relative;
+    width: 350px;
     @include breakpoints(tablet) {
       display: none;
     }
@@ -30,6 +31,7 @@
       border: 2px solid #ededf5;
       padding: 0.5rem;
       border-radius: 28px;
+      width: 80%;
     }
   }
 
@@ -46,6 +48,10 @@
           text-align: center;
           box-shadow: $box-shadow-navicon;
         }
+      }
+      .notfication__icon__container {
+        margin-right: 0.3rem;
+        position: relative;
       }
 
       img {
@@ -75,7 +81,6 @@
         animation: popupMenuToggle 0.5s;
 
         ul {
-          font-family: "poppins", sans-serif;
           font-size: 1rem;
           font-weight: 400;
           li {

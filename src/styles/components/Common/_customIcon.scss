@@ -16,8 +16,9 @@
   transition: all 0.3s ease-in-out;
   display: block;
   opacity: 1;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-right: 0.6rem;
+  color: $text-black;
   &:hover {
     color: $text-menu-active-color;
   }
@@ -31,13 +32,6 @@
 
 .sidebar__menu__icon.active {
   color: $text-menu-active-color !important;
-}
-.sidebar__menu__icon.logout {
-  font-size: 1.6rem;
-  color: red;
-  &:hover {
-    color: darkred;
-  }
   &:visited {
     color: none;
   }
@@ -55,4 +49,16 @@
   top: 5px;
   font-size: 1.5rem;
   color: $text-gray;
+}
+
+.notication__icon {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+  color: #8080a2;
+}
+.notification__dot {
+  color: red;
+  position: relative;
+  right: 15px;
+  bottom: 20px;
 }

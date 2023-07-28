@@ -7,6 +7,9 @@
   margin: auto;
   margin-bottom: 0.1rem;
   .sidebar__menu__link.active {
+    &:hover {
+      color: $text-menu-active-color !important;
+    }
     p {
       color: $text-menu-active-color !important;
     }
@@ -24,10 +27,12 @@
     .icon_text {
       display: flex;
       align-items: center;
+      &:hover {
+        color: $text-menu-active-color;
+      }
       p {
-        font-family: "poppins", sans-serif;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 1rem;
         color: $text-black;
         text-transform: capitalize;
         &:hover {
@@ -55,7 +60,6 @@
       .nav__link {
         color: $text-black;
         text-transform: capitalize;
-        font-family: "poppins", sans-serif;
         font-size: 0.9rem;
         font-weight: 400;
         &:hover {
@@ -68,20 +72,6 @@
       .active {
         color: $text-menu-active-color;
       }
-    }
-  }
-
-  .sidebar__logout {
-    font-family: "poppins", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    color: red;
-    text-transform: capitalize;
-    &:hover {
-      color: darkred;
-    }
-    &:visited {
-      color: none;
     }
   }
 }

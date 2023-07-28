@@ -1,106 +1,120 @@
-import { AiOutlineDashboard } from "react-icons/ai";
+import {
+  AiFillBank,
+  AiOutlineHome,
+  AiOutlineIdcard,
+  AiOutlineSetting,
+  AiOutlineStock,
+} from "react-icons/ai";
+import { FaUsers } from "react-icons/fa";
+import { GrPowerCycle } from "react-icons/gr";
+import { SlBookOpen } from "react-icons/sl";
+import { SiTaxbuzz } from "react-icons/si";
+import { RiServiceLine } from "react-icons/ri";
+import { PiUsersThree } from "react-icons/pi";
+import { GiMedicines, GiReceiveMoney, GiReturnArrow } from "react-icons/gi";
+import { BsCart4, BsPersonVcard, BsSearch } from "react-icons/bs";
 
 export let dashboardMenus = [
   {
     id: "337fwedkf",
     menu: "Dashboard",
-    icon: <AiOutlineDashboard />,
-    route: "/",
-  },
-  {
-    id: "337fwedkf1",
-    menu: "Customer",
-    icon: <AiOutlineDashboard />,
-    route: "/",
-  },
-  {
-    id: "337fwedkf2",
-    menu: "Supplier",
-    icon: <AiOutlineDashboard />,
+    icon: <AiOutlineHome />,
     route: "/",
   },
   {
     id: "337fwedkf3",
     menu: "Stock Medicine",
-    icon: <AiOutlineDashboard />,
+    icon: <GiMedicines />,
     route: "/medicine",
+  },
+  {
+    id: "337fwedkf1",
+    menu: "Customer",
+    icon: <FaUsers />,
+    route: "/customer",
+  },
+  {
+    id: "337fwedkf2",
+    menu: "Supplier",
+    icon: <PiUsersThree />,
+    route: "/supplier",
   },
   {
     id: "337fwedkf4",
     menu: "Purchase",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <BsCart4 />,
+    route: "/purchase",
   },
   {
     id: "337fwedkf5",
     menu: "Invoice",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <GiReceiveMoney />,
+    route: "/invoice",
   },
   {
     id: "337fwedkf6",
     menu: "Return",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <GiReturnArrow />,
+    route: "/return",
   },
   {
     id: "337fwedkf7",
     menu: "Stock",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <AiOutlineStock />,
+    route: "/stock",
   },
   {
     id: "337fwedkf8",
     menu: "Bank",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <AiFillBank />,
+    route: "/bank",
   },
   {
     id: "337fwedkf9",
     menu: "Accounts",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <AiOutlineIdcard />,
+    route: "/accounts",
   },
   {
     id: "337fwedkf10",
     menu: "Reports",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <SlBookOpen />,
+    route: "/reports",
   },
   {
     id: "337fwedkf11",
     menu: "Human Resource",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <BsPersonVcard />,
+    route: "/human-resource",
   },
   {
     id: "337fwedkf12",
     menu: "Tax",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <SiTaxbuzz />,
+    route: "/tax",
   },
   {
     id: "337fwedkf13",
     menu: "Service",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <RiServiceLine />,
+    route: "/service",
   },
   {
     id: "337fwedkf14",
     menu: "Search",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <BsSearch />,
+    route: "/search",
   },
   {
     id: "337fwedkf15",
     menu: "Application Setting",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <AiOutlineSetting />,
+    route: "/application-setting",
   },
   {
     id: "337fwedkf15",
     menu: "Autoupdate",
-    icon: <AiOutlineDashboard />,
-    route: "/",
+    icon: <GrPowerCycle />,
+    route: "/autoupdate",
   },
 ];
