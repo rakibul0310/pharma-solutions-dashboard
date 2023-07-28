@@ -1,11 +1,21 @@
+.sidebar__menu__list.active {
+  background-color: $bg-menu-active-color;
+  border-right: 3px solid $accent;
+  border-radius: 1px;
+}
 .sidebar__menu__list {
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
+  .sidebar__menu__link.active {
+    p {
+      color: $text-menu-active-color !important;
+    }
+  }
   .sidebar__menu__link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 30px;
+    padding: 2px 30px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     &:focus {

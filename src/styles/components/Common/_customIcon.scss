@@ -16,7 +16,6 @@
   transition: all 0.3s ease-in-out;
   display: block;
   opacity: 1;
-  color: $text-black;
   font-size: 1.3rem;
   margin-right: 0.6rem;
   &:hover {
@@ -30,6 +29,9 @@
   }
 }
 
+.sidebar__menu__icon.active {
+  color: $text-menu-active-color !important;
+}
 .sidebar__menu__icon.logout {
   font-size: 1.6rem;
   color: red;
@@ -45,4 +47,12 @@
   color: $text-black;
   font-size: 1.6rem;
   // box-shadow: $box-shadow-navicon;
+}
+
+.navbar__search__icon {
+  position: relative;
+  right: 40px;
+  top: 5px;
+  font-size: 1.5rem;
+  color: $text-gray;
 }

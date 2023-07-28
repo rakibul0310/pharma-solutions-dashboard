@@ -21,16 +21,14 @@ const MenuAccrodion = ({ setSidebarToggle }) => {
   const device = useBreakpoints();
   const protectedMenus = dashboardMenus;
 
-  const handleLogOut = () => {
-    localStorage.removeItem("blcToken");
-  };
-
   return (
     <>
       {protectedMenus.map((d, i) => (
         <li
           key={d.id}
-          className={`sidebar__menu__list ${d.dropdown ? "submenu" : ""}`}
+          className={`sidebar__menu__list ${d.dropdown ? "submenu" : ""} ${
+            activePath.pathname === d?.route ? "active" : ""
+          }`}
           id={d.id}
         >
           <CustomLink
@@ -40,10 +38,18 @@ const MenuAccrodion = ({ setSidebarToggle }) => {
               if (!d.dropdown) {
               }
             }}
-            className="sidebar__menu__link"
+            className={`sidebar__menu__link ${
+              activePath.pathname === d?.route ? "active" : ""
+            }`}
           >
             <div className="icon_text">
-              <CustomIcon className="sidebar__menu__icon">{d.icon}</CustomIcon>
+              <CustomIcon
+                className={`sidebar__menu__icon ${
+                  activePath.pathname === d?.route ? "active" : ""
+                }`}
+              >
+                {d.icon}
+              </CustomIcon>
               <p>{d.menu}</p>
             </div>
             <CustomIcon className="sidebar__menu__icon">
@@ -52,28 +58,26 @@ const MenuAccrodion = ({ setSidebarToggle }) => {
           </CustomLink>
           {collapse === d.id ? (
             <ul>
-              {d.dropdown
-                // ?.filter((pt) => pt?.permission?.includes(userRole)) // here should be "userRole"
-                ?.map((drop) => {
-                  return (
-                    <li key={drop.id}>
-                      <CustomLink
-                        href={drop?.route}
-                        className={`nav__link dropdown ${
-                          activePath.pathname === drop?.route ? "active" : ""
-                        }`}
-                        onClick={() => {
-                          //   sideBarShow(true);
-                          device.isTablet && setCollapse(false);
-                          // console.log("clicked");
-                          // setCollapse(false);
-                        }}
-                      >
-                        {drop.menu}
-                      </CustomLink>
-                    </li>
-                  );
-                })}
+              {d.dropdown?.map((drop) => {
+                return (
+                  <li key={drop.id}>
+                    <CustomLink
+                      href={drop?.route}
+                      className={`nav__link dropdown ${
+                        activePath.pathname === drop?.route ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        //   sideBarShow(true);
+                        device.isTablet && setCollapse(false);
+                        // console.log("clicked");
+                        // setCollapse(false);
+                      }}
+                    >
+                      {drop.menu}
+                    </CustomLink>
+                  </li>
+                );
+              })}
             </ul>
           ) : (
             console.log("null")

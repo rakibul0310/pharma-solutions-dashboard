@@ -20,6 +20,19 @@
     }
   }
 
+  .navbar__search {
+    position: relative;
+    @include breakpoints(tablet) {
+      display: none;
+    }
+    input {
+      position: relative;
+      border: 2px solid #ededf5;
+      padding: 0.5rem;
+      border-radius: 28px;
+    }
+  }
+
   .navbar__menu__lists {
     display: flex;
     .navbar__menu__list {
@@ -93,6 +106,19 @@
         animation: both;
         display: none;
         transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .navbar__menu__list.profile {
+    display: flex;
+    align-items: center;
+    .profile__text__container {
+      margin-left: 0.3rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include breakpoints(tablet) {
+        display: none;
       }
     }
   }

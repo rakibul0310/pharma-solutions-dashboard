@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
 import { FiSun } from "react-icons/fi";
+import { AiOutlineSearch } from "react-icons/ai";
+import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineDarkMode } from "react-icons/md";
 import CustomIcon from "../CustomIcon";
 import CustomLink from "../CustomLink";
@@ -41,6 +43,12 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
           </div>
         )} */}
       </div>
+      <div className="navbar__search">
+        <input type="search" placeholder="Search Now" name="" id="" />
+        <CustomIcon className="navbar__search__icon">
+          <AiOutlineSearch />
+        </CustomIcon>
+      </div>
       <div>
         <ul className="navbar__menu__lists">
           <li className="navbar__menu__list">
@@ -63,7 +71,7 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
               </button> */}
             </div>
           </li>
-          <li className="navbar__menu__list" ref={toggleRef}>
+          <li className="navbar__menu__list profile" ref={toggleRef}>
             <img
               src={avatar}
               alt="user_pic"
@@ -72,6 +80,12 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
                 // setShowPopupMenu(!showPopupMenu);
               }}
             />
+            <div className="profile__text__container">
+              <span>Bradly Robin</span>
+              <CustomIcon>
+                <IoIosArrowDown />
+              </CustomIcon>
+            </div>
             <div className={`popup__menu ${openMenu ? "open" : "close"}`}>
               <ul>
                 <li>

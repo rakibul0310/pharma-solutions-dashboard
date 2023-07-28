@@ -4,6 +4,7 @@ import { useBreakpoints } from "react-device-breakpoints";
 import CustomLink from "../CustomLink";
 import MenuAccrodion from "./MenuAccrodion";
 import logo from "../../Assets/logo.svg";
+import userIcon from "../../Assets/userIcon.svg";
 
 const Sidebar = ({ sidebarToggle, setSidebarToggle }) => {
   let toggleRef = useRef();
@@ -37,8 +38,13 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle }) => {
         </CustomLink>
       </div>
       <div className="user__info__container">
-        {/* <h2>{userInfo.data.name}</h2>
-        <span>{userInfo.data.email}</span> */}
+        <div className="user__icon__container">
+          <img src={userIcon} alt="" srcset="" />
+        </div>
+        <div className="user__info__text__container">
+          <h5 className="name">admin user</h5>
+          <span className="email">admin@gmail.com</span>
+        </div>
       </div>
       <div className="sidebar__menu__container">
         <ul className="sidebar__menu__lists">
