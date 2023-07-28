@@ -23,7 +23,6 @@ const Dashboard = () => {
       {/* main container */}
       <div className="main__container">
         {/* sidebar section */}
-
         <div
           className={`${
             device.isTablet && !triggred
@@ -55,13 +54,11 @@ const Dashboard = () => {
           {/* main content here  */}
           <div className="main__content__container">
             {/* main content here */}
-            {/* <StudentHome /> */}
             <AppContent />
           </div>
           {/* footer here  */}
         </div>
       </div>
-      {/* </MatchMediaBreakpoints> */}
       <Footer />
     </>
   );

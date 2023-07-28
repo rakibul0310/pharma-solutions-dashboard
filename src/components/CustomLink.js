@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import "../../styles/components/_link.scss";
 
 const CustomLink = (props) => {
   let match = useLocation();

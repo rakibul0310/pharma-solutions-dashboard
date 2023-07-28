@@ -33,7 +33,7 @@ export const deleteUser = createAsyncThunk(
   }
 );
 
-// Then, handle actions in auth reducers:
+// Then, handle actions in user reducers:
 export const userSlice = createSlice({
   name: "users",
   initialState: {

@@ -14,10 +14,8 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle }) => {
   useEffect(() => {
     const handleMenuDropDown = (e) => {
       if (device.isTablet && !toggleRef?.current?.contains(e?.target)) {
-        // setSidebarToggle(true);
         console.log(sidebarToggle);
       }
-      // console.log(openMenu);
     };
 
     document.addEventListener("mousedown", handleMenuDropDown);

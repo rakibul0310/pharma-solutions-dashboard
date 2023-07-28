@@ -15,9 +15,8 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
     const handleMenuDropDown = (e) => {
       if (!toggleRef?.current?.contains(e?.target)) {
         setOpenMenu(false);
-        // console.log(toggleRef);
       }
-      // console.log(openMenu);
+      console.log(openMenu);
     };
 
     document.addEventListener("mousedown", handleMenuDropDown);
@@ -43,24 +42,7 @@ const NavBar = ({ sidebarToggle, setSidebarToggle, setTriggred }) => {
       <div>
         <ul className="navbar__menu__lists">
           <li className="navbar__menu__list">
-            <div className="theme_icon">
-              {/* <button
-                onClick={() =>
-                  setChangeTheme(changeTheme === "light" ? "dark" : "light")
-                }
-                id="theme_icon"
-              >
-                {changeTheme === "dark" ? (
-                  <CustomIcon className="theme__change__icon">
-                    <FiSun />
-                  </CustomIcon>
-                ) : (
-                  <CustomIcon className="theme__change__icon">
-                    <MdOutlineDarkMode />
-                  </CustomIcon>
-                )}
-              </button> */}
-            </div>
+            <div className="theme_icon"></div>
           </li>
           <li className="navbar__menu__list profile" ref={toggleRef}>
             <div className="notfication__icon__container">

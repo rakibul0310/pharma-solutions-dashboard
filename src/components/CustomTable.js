@@ -1,41 +1,27 @@
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deleteUser } from "../features/slices/userSlice";
+import { toast } from "react-toastify";
+import Button from "./Button";
 
 const CustomTable = ({
   tableHeades,
   tableDatas,
   perPageShow,
   showPagination,
+  setData,
 }) => {
+  const dispatch = useDispatch();
   const [pageShow, setPageShow] = useSearchParams();
   const pageTerm = pageShow.get("newPage") || "";
-  // console.log(tableHeades);
-  // console.log(tableDatas);
-  // console.log(perPageShow);
-  //   const defaultValues = {
-  //     pageShow: parseInt(pageTerm) ? parseInt(pageTerm) : 1,
-  //   };
 
   const [page, setPage] = useState(parseInt(pageTerm) ? parseInt(pageTerm) : 0);
 
-  //   const [searchValues, setSearchValues] = useReducer(
-  //     (state, action) => ({ ...state, ...action }),
-  //     defaultValues
-  //   );
-
-  //   const [rowsPerPage, setRowsPerPage] = useState(perPageShow);
-
   const handleChangePage = (newPage) => {
     setPage(newPage);
-    // setSearchValues({ pageShow: newPage });
     setPageShow({ newPage });
   };
-
-  //   const handleChangeRowsPerPage = (event) => {
-  //     setRowsPerPage(+event.target.value);
-  //     // setPage(0);
-  //     // setPage(searchValues);
-  //   };
 
   const maxPaginateCount = Math.ceil(tableDatas.length / perPageShow);
 
@@ -60,7 +46,25 @@ const CustomTable = ({
                 <tr key={idx}>
                   {tableHeades.map((head, idy) => {
                     const value = data[head.id];
-                    return <td key={idy}>{value}</td>;
+                    return head.id === "action" ? (
+                      <td key={idy}>
+                        <Button
+                          className="btn__error"
+                          onClick={() => {
+                            dispatch(deleteUser(data?.id));
+                            const remain = tableDatas?.filter(
+                              (r) => r?.id !== data?.id
+                            );
+                            setData(remain);
+                            toast.success("User deleted!");
+                          }}
+                        >
+                          Delete
+                        </Button>
+                      </td>
+                    ) : (
+                      <td key={idy}>{value}</td>
+                    );
                   })}
                 </tr>
               ))}

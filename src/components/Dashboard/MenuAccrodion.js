@@ -70,10 +70,7 @@ const MenuAccrodion = ({ setSidebarToggle }) => {
                         activePath.pathname === drop?.route ? "active" : ""
                       }`}
                       onClick={() => {
-                        //   sideBarShow(true);
                         device.isTablet && setCollapse(false);
-                        // console.log("clicked");
-                        // setCollapse(false);
                       }}
                     >
                       {drop.menu}
