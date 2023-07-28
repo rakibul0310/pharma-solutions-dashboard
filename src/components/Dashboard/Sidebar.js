@@ -28,7 +28,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle }) => {
       <div className="logo__container">
         <CustomLink className="header__logo" href="/">
           <div className="header__logo__container">
-            <img src={logo} alt="" srcset="" />
+            <img src={logo} alt="" />
             <div className="logo__text__container">
               <h5 className="text1">Pharma</h5>
               <span></span>
@@ -39,7 +39,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle }) => {
       </div>
       <div className="user__info__container">
         <div className="user__icon__container">
-          <img src={userIcon} alt="" srcset="" />
+          <img src={userIcon} alt="" />
         </div>
         <div className="user__info__text__container">
           <h5 className="name">admin user</h5>

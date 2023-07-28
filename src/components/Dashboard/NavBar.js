@@ -1,11 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
-import { FiSun } from "react-icons/fi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
-import { MdOutlineDarkMode } from "react-icons/md";
 import CustomIcon from "../CustomIcon";
-import CustomLink from "../CustomLink";
 import avatar from "../../Assets/profile.png";
 import { GrNotification } from "react-icons/gr";
 import { GoDotFill } from "react-icons/go";

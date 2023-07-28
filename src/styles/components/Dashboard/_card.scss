@@ -1,0 +1,47 @@
+.card__main__container {
+  background-color: $bg-white;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  .card__left {
+    h5 {
+      color: $base-300;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 157.143% */
+      letter-spacing: 0.196px;
+      text-transform: capitalize;
+      margin: 0;
+    }
+    span {
+      color: $base-300;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 133.333% */
+    }
+    .card__action__container {
+      span {
+        color: $base-300;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .card__right {
+    .icon__container {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

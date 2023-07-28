@@ -112,7 +112,7 @@ export let dashboardMenus = [
     route: "/application-setting",
   },
   {
-    id: "337fwedkf15",
+    id: "337fwedkf16",
     menu: "Autoupdate",
     icon: <GrPowerCycle />,
     route: "/autoupdate",

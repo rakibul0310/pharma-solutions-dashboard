@@ -1,0 +1,79 @@
+.dasbhboard__home__main__container {
+  background-color: $bg-gray;
+  padding: 1rem 2rem 10rem 2rem;
+  .dashboard__card__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    border-radius: 18px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    @include breakpoints(tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .pie__area__chart__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    @include breakpoints(tablet) {
+      flex-direction: column;
+    }
+    .pie__chart__container,
+    .area__chart__container {
+      padding: 1.3rem;
+      margin: 0 0.5rem;
+      background-color: $white;
+      border-radius: 12px;
+      width: 50%;
+      box-shadow: $box-shadow-1;
+      @include breakpoints(tablet) {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+    .pie__chart__container {
+      background: url("../../../../Assets/pie-bg.png"),
+        $white 14px -64.275px / 97.358% 132.036% no-repeat;
+    }
+  }
+
+  .bar__and__summary__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoints(tablet) {
+      flex-direction: column;
+    }
+    .bar__chart__container,
+    .summary__container {
+      padding: 1.3rem;
+      margin: 0 0.5rem;
+      background-color: $white;
+      border-radius: 12px;
+      width: 65%;
+      box-shadow: $box-shadow-1;
+      @include breakpoints(tablet) {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+    .summary__container {
+      width: 35%;
+      @include breakpoints(tablet) {
+        width: 100%;
+      }
+    }
+    .bar__chart__container {
+      .chart__title__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .button__container {
+          display: flex;
+        }
+      }
+    }
+  }
+}
