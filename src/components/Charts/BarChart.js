@@ -10,7 +10,7 @@ const BarChart = () => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "55%",
+        columnWidth: "100%",
         endingShape: "rounded",
       },
     },

@@ -6,6 +6,12 @@
 .sidebar__menu__list {
   margin: auto;
   margin-bottom: 0.1rem;
+  .sidebar__menu__link.disable {
+    pointer-events: none;
+    p {
+      color: $text-disabled !important;
+    }
+  }
   .sidebar__menu__link.active {
     &:hover {
       color: $text-menu-active-color !important;

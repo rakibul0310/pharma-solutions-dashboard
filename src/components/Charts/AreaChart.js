@@ -44,7 +44,7 @@ const AreaChart = () => {
         shade: "dark",
         type: "vertical",
         shadeIntensity: 0.5,
-        gradientToColors: ["#ABE5A1", "#FFC085"],
+        gradientToColors: ["#64C8BC", "rgba(100, 200, 188, 0.5)"],
         inverseColors: false,
         opacityFrom: 0.2,
         opacityTo: 0.2,

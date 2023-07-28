@@ -37,6 +37,10 @@
   }
 }
 
+.sidebar__menu__icon.disable {
+  color: $text-disabled !important;
+}
+
 .hamburger_icon {
   color: $text-black;
   font-size: 1.6rem;
