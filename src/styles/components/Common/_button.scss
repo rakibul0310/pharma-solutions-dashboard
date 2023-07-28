@@ -13,6 +13,21 @@
   position: relative;
   overflow: hidden;
 }
+.btn__base-300 {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: $base-300;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
 .btn {
   display: inline-block;

@@ -94,6 +94,7 @@ $gray-light: #f8f9fa;
   --border-4: 1px solid #eaedf1;
   --hover-border: 1px solid #00a5ec;
   --border-header: 1px solid #eaedf1;
+  --table-border: 1px solid rgba(100, 200, 188, 0.308);
 }
 
 // background color variables
@@ -144,6 +145,7 @@ $border-3: var(--border-3);
 $border-4: var(--border-4);
 $hover-border: var(--hover-border);
 $border-header: var(--border-header);
+$table-border: var(--table-border);
 
 // font family variable
 $font-family: "Barlow", sans-serif;

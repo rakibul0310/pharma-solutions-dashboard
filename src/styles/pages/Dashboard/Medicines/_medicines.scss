@@ -1,0 +1,43 @@
+.medicine__main__container {
+  background-color: $bg-gray;
+  padding: 1rem 2rem 10rem 2rem;
+  .page__heding__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .heading__and__path {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 30%;
+      .page__heading {
+        h5 {
+          margin: 0;
+          color: $base-300;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+        }
+      }
+      .route__path {
+        .path {
+          color: $base-300;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px; /* 133.333% */
+          letter-spacing: 0.5px;
+          span {
+            color: #000;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+}

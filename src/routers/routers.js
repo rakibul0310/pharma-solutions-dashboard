@@ -26,9 +26,9 @@ export const routers = [
     component: DashboardHome,
   },
   {
-    path: "/medicines",
+    path: "/medicine",
     exact: true,
-    name: "Medicines",
+    name: "Medicine",
     component: Medicines,
   },
 ];
